@@ -6,8 +6,14 @@ from predibase import Predibase
 
 st.set_page_config(page_title="User/Company Multi-Page App", layout="wide")
 
-# 챗봇 섹션
-st.title("Return Rangers ")
+# 로고와 타이틀을 두 개의 열로 나눔
+col1, col2 = st.columns([1, 5])  # 첫 번째 열은 좁게, 두 번째 열은 넓게 설정
+
+with col1:
+    st.image("1.png", width=100)  # 로고의 크기를 적절하게 설정
+
+with col2:
+    st.title("RefundRangers💪 - your Tax Return Co-pilot")
 
 # 사용자에게 입력받을 occupation 변수
 occupation = st.text_input("What is your occupation?")
@@ -17,7 +23,7 @@ email = st.text_input(
     "What is your email address? (optional)", placeholder="example@example.com"
 )
 
-st.title("Strategies for Your Deduction:")
+st.title("Your Occupation's Deduction Strategy")
 
 # occupation이 입력되었고, 아직 response_rag가 세션 상태에 저장되지 않았다면 처리
 if occupation and "response_rag_displayed" not in st.session_state:
