@@ -7,7 +7,7 @@ from predibase import Predibase
 st.set_page_config(page_title="User/Company Multi-Page App", layout="wide")
 
 # 챗봇 섹션
-st.title("ReturnRangers ")
+st.title("Return Rangers ")
 
 # 사용자에게 입력받을 occupation 변수
 occupation = st.text_input("What is your occupation?")
