@@ -7,7 +7,7 @@ from predibase import Predibase
 st.set_page_config(page_title="User/Company Multi-Page App", layout="wide")
 
 # 챗봇 섹션
-st.title("Refund Ranger Chatbot")
+st.title("ReturnRangers ")
 
 # 사용자에게 입력받을 occupation 변수
 occupation = st.text_input("What is your occupation?")
@@ -17,7 +17,7 @@ email = st.text_input(
     "What is your email address? (optional)", placeholder="example@example.com"
 )
 
-st.title("Your occupation's deduction strategy")
+st.title("Strategies for Your Deduction:")
 
 # occupation이 입력되었고, 아직 response_rag가 세션 상태에 저장되지 않았다면 처리
 if occupation and "response_rag_displayed" not in st.session_state:
